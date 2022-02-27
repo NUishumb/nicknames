@@ -10,6 +10,7 @@ describe.each([
     { received: 'te55st555s', expected: true },
     { received: 'U77s77e77r', expected: true },
     { received: 'user-', expected: false },
+    { received: 'кот', expected: false },
 ])('.add($#)', ({ received, expected }) => {
     test(`returns ${expected}`, () => {
         expect(new Validator().validateUsername(received)).toBe(expected);
